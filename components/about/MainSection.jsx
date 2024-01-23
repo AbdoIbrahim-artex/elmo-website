@@ -1,16 +1,17 @@
+import { useIntl } from "react-intl";
 import { aboutGif } from "../../assets";
 import { Container } from "../../shared";
-import Image from 'next/image'
+import Image from "next/image";
 
 const MainSection = () => {
+    const intl = useIntl();
     return (
         <Container className={"px-5 mt-28 md:mt-0"}>
             <div className="h-[110vh] flex items-center flex-wrap md:flex-nowrap gap-5 justify-between">
                 <div className="md:w-1/2">
                     <div className="flex flex-col gap-5 w-full lg:w-[561px]">
                         <h1 className="titleWithDark !leading-[61px] !text-[48px]">
-                            We provide truly prominent IT solutions for your
-                            success
+                            {intl.formatMessage({ id: "aboutPageHeroTitle" })}
                         </h1>
                         <p className="textWithDark w-full lg:w-[450px] !leading-[36px] !text-[24px]">
                             Our team of experts is dedicated to staying at the

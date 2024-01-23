@@ -1,5 +1,7 @@
 {
     "navAboutUs": "About",
     "navServices": "Services",
-    "navContactUs": "Contact"
+    "navContactUs": "Contact",
+    "contactUsBtn" : "Contact us",
+    "aboutPageHeroTitle" : "We provide truly prominent IT solutions for yoursuccess"
 }

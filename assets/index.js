@@ -32,12 +32,22 @@ import javaScriptIcon from './icons/javaScriptIcon.png';
 import mysqlIcon from './icons/mysqlIcon.png';
 import phpIcon from './icons/phpIcon.png';
 import italy from './icons/italy.png';
+import servIcon1 from './icons/servIcon1.png';
+import servIcon2 from './icons/servIcon2.png';
+import servIcon3 from './icons/servIcon3.png';
+import aboutSectionImg1 from './images/about/about-06.jpg';
+import aboutSectionImg2 from './images/about/about-07.jpg';
 
 export {
     mainLogo,
     darkLogo,
     engIcon,
+    aboutSectionImg1,
+    aboutSectionImg2,
     italy,
+    servIcon1,
+    servIcon2,
+    servIcon3,
     buttonArrow,
     footerImage,
     aboutGif,

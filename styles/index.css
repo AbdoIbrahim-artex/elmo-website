@@ -137,6 +137,26 @@
         hover:text-[var(--whiteColor)]
         hover:border-transparent;
     }
+    .cardOffer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .cardOffer::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        background-color: rgba(31, 39, 50, 0.55);
+        transition: 300ms ease-in-out;
+    }
+    .cardOffer:hover::after {
+        background-color: white;
+    }
 }
 
 /* for mainButton in app */

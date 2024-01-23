@@ -1,5 +1,7 @@
 {
     "navAboutUs": "chi siamo",
     "navServices": "servizi",
-    "navContactUs": "Contattaci"
+    "navContactUs": "Contattaci",
+    "contactUsBtn" : "Contattaci mio",
+    "aboutPageHeroTitle" : "Forniamo soluzioni IT davvero importanti per il tuo successo"
 }

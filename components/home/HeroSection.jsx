@@ -1,10 +1,11 @@
-
 import Link from "next/link";
 import { buttonArrow } from "../../assets";
 import { AnimatedText } from "../../shared";
-import Image from 'next/image'
+import Image from "next/image";
+import { useIntl } from "react-intl";
 
 const HeroSection = () => {
+    const intl = useIntl();
     return (
         <div className="z-10">
             <div className="heroSection bg-[url('../public/hero.png')] px-5">
@@ -19,7 +20,7 @@ const HeroSection = () => {
                         }
                     />
                     <Link href={"contact"} className="mainBtn inline-block">
-                        Contact us
+                        {intl.formatMessage({ id: "contactUsBtn" })}
                     </Link>
                 </div>
                 {/* to bottom btn */}
@@ -28,11 +29,15 @@ const HeroSection = () => {
                         Providing The Most Responsive And Functional IT
                     </p> */}
                     <AnimatedText
-                        className="text-baseFont text-[24px] text-[var(--textColor)] dark:text-[var(--textDarkColor)] capitalize"
+                        className="text-baseFont text-[24px] text-[var(--textColor)] dark:text-[var(--whiteColor)] capitalize"
                         text={"Providing The Most Responsive And Functional IT"}
                     />
-                    <div className="flex cursor-pointer items-center absolute bottom-5 right-5 md:relative md:bottom-0 md:right-0 flex-shrink-0 justify-center w-[64px] h-[64px] rounded-[50%] bg-[var(--secondaryColor)] dark:bg-[var(--secondaryDarkColor)]">
-                        <Image   fill={false}  src={buttonArrow} alt="to bottom button" />
+                    <div  className="flex cursor-pointer items-center absolute bottom-5 right-5 md:relative md:bottom-0 md:right-0 flex-shrink-0 justify-center w-[64px] h-[64px] rounded-[50%] bg-[var(--secondaryColor)] dark:bg-[var(--secondaryDarkColor)]">
+                        <Image
+                            fill={false}
+                            src={buttonArrow}
+                            alt="to bottom button"
+                        />
                     </div>
                 </div>
             </div>

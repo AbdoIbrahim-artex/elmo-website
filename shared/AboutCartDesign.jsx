@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 // eslint-disable-next-line react/prop-types
 const AboutCartDesign = ({ isDark, title, desc }) => {
     return (
@@ -6,7 +6,7 @@ const AboutCartDesign = ({ isDark, title, desc }) => {
             <div className="w-full sm:w-1/2 md:w-[319px] flex flex-col gap-7">
                 {/* icon */}
                 <Image
-              fill={false}
+                    fill={false}
                     src={isDark}
                     className="w-[80px]"
                     alt="elmo solutions about icon"

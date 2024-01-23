@@ -12,7 +12,7 @@ import Head from "next/head";
 const Home = () => {
     return (
         <>
-              <Head>
+            <Head>
                     <meta charset="UTF-8" />
                     <link
                         rel="icon"
@@ -82,7 +82,7 @@ const Home = () => {
                         href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;500;600;800;900&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
                         rel="stylesheet"
                     />
-                </Head>
+            </Head>
             <div className="w-full flex flex-col gap-20">
                 {/* main section in home page */}
                 <HeroSection />

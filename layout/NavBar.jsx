@@ -4,14 +4,14 @@ import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { CgMenuRight } from "react-icons/cg";
 import { useCallback, useEffect, useState } from "react";
-// import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleLangFun, toggleThemeFun } from "../store/reducres/Toggle";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 
 const NavBar = () => {
-    // const [t, i18n] = useTranslation();
     const dispatch = useDispatch();
     const { toggleLang, toggleTheme } = useSelector(
         (state) => state.toggleMode
@@ -23,6 +23,9 @@ const NavBar = () => {
         initial: {},
         animate: {},
     });
+
+    const router = useRouter();
+    const intl = useIntl();
 
     // handel navigation
     const handleScroll = useCallback(() => {
@@ -73,23 +76,13 @@ const NavBar = () => {
         dispatch(toggleThemeFun(toggleTheme === "light" ? "dark" : "light"));
     };
 
-    // toggle language
     const toggleLanguage = useCallback(
-        // Correct
-        // (language) => {
-        //     dispatch(toggleLangFun(language));
-        //     i18n.changeLanguage(language);
-        //     localStorage.setItem("lang", language);
-        // },
-        // [i18n, dispatch]
-
-        // inCorrect
         (language) => {
             dispatch(toggleLangFun(language));
-            // i18n.changeLanguage(language);
             localStorage.setItem("lang", language);
+            router.replace(router.pathname, router.asPath, { locale: language });
         },
-        [dispatch]
+        [dispatch,router]
     );
 
     const toggleNavMenu = () => {
@@ -107,21 +100,14 @@ const NavBar = () => {
 
     // to change theme
     useEffect(() => {
-        // setNavStyle({
-        //     ...navStyle,
-        //     animate: {
-        //         ...navStyle?.animate,
-        //         backgroundColor:
-        //             themeMode === "light"
-        //                 ? "var(--secondaryDarkColor)"
-        //                 : "var(--blackColor)",
-        //     },
-        // });
         if (toggleTheme === "dark") {
             document?.documentElement?.classList?.add("dark");
+            handleScroll();
         } else {
             document?.documentElement?.classList?.remove("dark");
+            handleScroll();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [toggleTheme]);
 
     return (
@@ -152,21 +138,18 @@ const NavBar = () => {
                 <nav className="flex gap-7 items-center text-[20px] capitalize text-[var(--blackColor)] dark:text-[var(--whiteColor)]">
                     <Link
                         className="active:text-[var(--mainColor)] hover:text-[var(--mainColor)] transition"
-                        href={"About"}
+                        href={"/About"}
                     >
-                        {/* {t("navAboutUs")} */}
-                        About Us
+                        {intl.formatMessage({ id: "navAboutUs" })}
                     </Link>
                     <Link
                         className="active:text-[var(--mainColor)] hover:text-[var(--mainColor)] transition"
-                        href={"Services"}
+                        href={"/Services"}
                     >
-                        {/* {t("navServices")} */}
-                        Services
+                        {intl.formatMessage({ id: "navServices" })}
                     </Link>
-                    <Link href={"ContactUs"} className="navBarBtn">
-                        {/* {t("navContactUs")} */}
-                        Contact Us
+                    <Link href={"/ContactUs"} className="navBarBtn">
+                        {intl.formatMessage({ id: "navContactUs" })}
                     </Link>
                 </nav>
                 <div className="settings flex items-center space-x-4">
