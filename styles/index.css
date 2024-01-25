@@ -24,6 +24,10 @@
         relative overflow-hidden
         bg-no-repeat dark:before:bg-gradient-to-l from-[#2f2f2f] from-70%  to-[#ffffff];
     }
+    .heroSection {
+        background-position: -140px -80px;
+        background-size:80%;
+    }
     .heroSection::before {
         display: block;
         content: "";

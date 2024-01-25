@@ -1,21 +1,15 @@
-import { useSelector } from "react-redux";
+
 import Image from "next/image";
 import {
-    about1,
     about1Light,
-    about2,
     about2Light,
-    about3,
     about3Light,
-    aboutGif,
     aboutSectionImg1,
     aboutSectionImg2,
 } from "../../assets";
-import { AboutCartDesign } from "../../shared";
 import Link from "next/link";
 
 const AboutSection = () => {
-    const { toggleTheme } = useSelector((state) => state.toggleMode);
     return (
         <div className="flex flex-col gap-16 w-[97%] m-auto px-5">
             <div className="flex items-start justify-between flex-wrap lg:flex-nowrap gap-5">
@@ -25,7 +19,7 @@ const AboutSection = () => {
                         Who Are We?
                     </p>
                     <h2 className="titleWithDark !text-[40px] md:!text-[40px] lg:!text-[38px] sm:w-[100%] lg:w-[561px] !leading-[61px]">
-                        We provide truly prominent IT solutions for your success
+                        Elmo Tech is your Partner in Digital Transformation
                     </h2>
                     <p data-aos="fade-right" className="text-[var(--textColor)] dark:text-[var(--textDarkColor)] mt-4 text-[20px]">
                         We’re first rate grant winning agency that forms sites
@@ -43,19 +37,18 @@ const AboutSection = () => {
                             <div className="bg-[var(--mainColor)] dark:bg-[var(--darkColor)] flex-shrink-0 w-[60px] h-[60px] p-[10px] rounded flex items-center justify-center">
                                 <Image
                                     fill={false}
-                                    src={about1Light}
+                                    src={about2Light}
                                     alt="elmo solutions about icon"
                                 />
                             </div>
                             <div>
                                 {/* title */}
                                 <h3 className="titleWithDark mb-2">
-                                    Expert Team
+                                    Strategic Solutions
                                 </h3>
                                 {/* desc */}
                                 <p className="textWithDark !text-[20px]">
-                                    Accelerate Innovation With World-Class Tech
-                                    Teams
+                                   Smart plans designed to make your business better.
                                 </p>
                             </div>
                         </div>
@@ -69,19 +62,18 @@ const AboutSection = () => {
                             <div className="bg-[var(--mainColor)] dark:bg-[var(--darkColor)] flex-shrink-0 w-[60px] h-[60px] p-[10px] rounded flex items-center justify-center">
                                 <Image
                                     fill={false}
-                                    src={about2Light}
+                                    src={about3Light}
                                     alt="elmo solutions about icon"
                                 />
                             </div>
                             <div>
                                 {/* title */}
                                 <h3 className="titleWithDark mb-2">
-                                    Quality Control
+                                    Always On Your Side
                                 </h3>
                                 {/* desc */}
                                 <p className="textWithDark !text-[20px]">
-                                    Accelerate Innovation With World-Class Tech
-                                    Teams
+                                    commitment ensures 24/7 support, responsive solutions,
                                 </p>
                             </div>
                         </div>
@@ -95,19 +87,18 @@ const AboutSection = () => {
                             <div className="bg-[var(--mainColor)] dark:bg-[var(--darkColor)] flex-shrink-0 w-[60px] h-[60px] p-[10px] rounded flex items-center justify-center">
                                 <Image
                                     fill={false}
-                                    src={about3Light}
+                                    src={about1Light}
                                     alt="elmo solutions about icon"
                                 />
                             </div>
                             <div className="w-full md:max-w-xs">
                                 {/* title */}
                                 <h3 className="titleWithDark mb-2">
-                                    Integration
+                                    Quality Reliability
                                 </h3>
                                 {/* desc */}
                                 <p className="textWithDark !text-[20px]">
-                                    Accelerate Innovation With World-Class Tech
-                                    Teams
+                                    We promise to make things work reliably, delivering consistent professional excellence.
                                 </p>
                             </div>
                         </div>
@@ -115,7 +106,7 @@ const AboutSection = () => {
                     <Link
                         data-aos="fade-up"
                         href={"About"}
-                        className="mainBtn mt-6 inline-block"
+                        className="mainBtn my-6 md:mt-16 inline-block"
                     >
                         Read more
                     </Link>

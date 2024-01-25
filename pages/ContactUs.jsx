@@ -13,8 +13,7 @@ const ContactUs = () => {
                     <meta charset="UTF-8" />
                     <link
                         rel="icon"
-                        type="image/svg+xml"
-                        href="/public/logo.png"
+                        href="/logo.png"
                     />
                     <meta
                         name="viewport"
