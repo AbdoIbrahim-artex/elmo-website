@@ -184,3 +184,20 @@
     font-[700] text-[var(--blackColor)] capitalize
     dark:text-[var(--whiteColor)];
 }
+
+/* custom media query */
+
+@media only screen and (max-width: 1125px) {
+    .heroSection {
+        background-position: -220px 0px;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 757px) {
+    .heroSection {
+        background-position: -412px 20px !important;
+        background-size: cover;
+    }
+}
+
