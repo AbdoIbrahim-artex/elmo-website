@@ -36,7 +36,7 @@ const OurProgress = () => {
                         <li className="textWithDark !leading-[44px] !text-[32px]">
                             Testing and Quality Assurance: We rigorously test
                             and debug our software solutions to ensure that they
-                            meet our clients' requirements and are free of
+                            meet our clients requirements and are free of
                             errors or bugs.
                         </li>
                         <li className="textWithDark !leading-[44px] !text-[32px]">

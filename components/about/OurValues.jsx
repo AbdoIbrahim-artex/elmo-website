@@ -15,7 +15,7 @@ const OurValues = () => {
                 <div className="md:w-[815px] md:self-end">
                     <ul className="flex flex-col gap-10 list-decimal ml-8 md:ml-0">
                         <li className="textWithDark !leading-[44px] !text-[32px]">
-                            Customer Focus: We put our clients' needs first, and
+                            Customer Focus: We put our clients needs first, and
                             we are committed to delivering software solutions
                         </li>
                         <li className="textWithDark !leading-[44px] !text-[32px]">
@@ -30,7 +30,7 @@ const OurValues = () => {
                         </li>
                         <li className="textWithDark !leading-[44px] !text-[32px]">
                             Quality: We are committed to delivering high-quality
-                            software solutions that meet our clients' needs and
+                            software solutions that meet our clients needs and
                             are free of errors or bugs.
                         </li>
                         <li className="textWithDark !leading-[44px] !text-[32px]">
