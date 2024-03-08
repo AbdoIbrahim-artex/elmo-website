@@ -8,8 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleLangFun, toggleThemeFun } from "../store/reducres/Toggle";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useIntl } from "react-intl";
+// import { useRouter } from "next/router";
+// import { useIntl } from "react-intl";
 
 const NavBar = () => {
     const dispatch = useDispatch();
@@ -24,8 +24,8 @@ const NavBar = () => {
         animate: {},
     });
 
-    const router = useRouter();
-    const intl = useIntl();
+    // const router = useRouter();
+    // const intl = useIntl();
 
     // handel navigation
     const handleScroll = useCallback(() => {
@@ -76,14 +76,14 @@ const NavBar = () => {
         dispatch(toggleThemeFun(toggleTheme === "light" ? "dark" : "light"));
     };
 
-    const toggleLanguage = useCallback(
-        (language) => {
-            dispatch(toggleLangFun(language));
-            localStorage.setItem("lang", language);
-            router.replace(router.pathname, router.asPath, { locale: language });
-        },
-        [dispatch,router]
-    );
+    // const toggleLanguage = useCallback(
+    //     (language) => {
+    //         dispatch(toggleLangFun(language));
+    //         localStorage.setItem("lang", language);
+    //         router.replace(router.pathname, router.asPath, { locale: language });
+    //     },
+    //     [dispatch,router]
+    // );
 
     const toggleNavMenu = () => {
         setOpenMenu(openMenu ? false : true);
@@ -140,21 +140,24 @@ const NavBar = () => {
                         className="active:text-[var(--mainColor)] hover:text-[var(--mainColor)] transition"
                         href={"/About"}
                     >
-                        {intl.formatMessage({ id: "navAboutUs" })}
+                        {/* {intl.formatMessage({ id: "navAboutUs" })} */}
+                        about us
                     </Link>
                     <Link
                         className="active:text-[var(--mainColor)] hover:text-[var(--mainColor)] transition"
                         href={"/Services"}
                     >
-                        {intl.formatMessage({ id: "navServices" })}
+                        {/* {intl.formatMessage({ id: "navServices" })} */}
+                        Services
                     </Link>
                     <Link href={"/ContactUs"} className="navBarBtn">
-                        {intl.formatMessage({ id: "navContactUs" })}
+                        {/* {intl.formatMessage({ id: "navContactUs" })} */}
+                        Contact Us
                     </Link>
                 </nav>
                 <div className="settings flex items-center space-x-4">
                     {/* switch languages  */}
-                    <div
+                    {/* <div
                         onClick={() =>
                             toggleLanguage(toggleLang === "en" ? "it" : "en")
                         }
@@ -166,7 +169,7 @@ const NavBar = () => {
                             className="w-[40px]"
                             fill={false}
                         />
-                    </div>
+                    </div> */}
                     {/* toggle theme */}
                     <div
                         onClick={handelDarkMode}
